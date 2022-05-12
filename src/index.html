@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>To Do List</title>
+</head>
+<body>
+  <div class="list-container">
+    <div class="title-container">
+      <span class="title">To Do List</span>
+      <a href="#" id="refresh"><i class="fa fa-refresh"></i></a>
+    </div>
+    <div class="entry-container">
+      <form class="entry-form" id="list-form">
+        <input class="input-task" type="text" name="task" id="task" minlength="3" placeholder="Add to you list...">
+        <button class="btn-form" type="submit">↵</button>
+      </form>
+    </div>
+    <div class="list-block">
+
+    </div>
+    <div class="clearall">
+      <a href="#" id="clear-completed">Clear completed</a>
+    </div>
+  </div>
+  <script src="./src/index.js"></script>
+</body>
+</html>
