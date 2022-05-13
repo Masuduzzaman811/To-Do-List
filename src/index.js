@@ -1,4 +1,4 @@
-import './src/style.css';
+import '../src/style.css';
 
 const listBlock = document.querySelector('.list-block');
 const task = [
