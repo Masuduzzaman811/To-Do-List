@@ -31,7 +31,6 @@ export default class Task {
                   <hr>
                   `;
       }
-
       mainTasks.innerHTML += taskTemplate;
     });
     this.actions();
@@ -39,7 +38,6 @@ export default class Task {
 
   static addTask = (e) => {
     e.preventDefault();
-
     this.tasks = [];
     this.tasks = JSON.parse(localStorage.getItem('tasks')) !== null ? (this.tasks = JSON.parse(localStorage.getItem('tasks'))) : [];
 
@@ -48,7 +46,6 @@ export default class Task {
       completed: false,
       index: 0,
     };
-
     if (description.value === '') {
       return false;
     }
