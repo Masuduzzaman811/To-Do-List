@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.resolve( __dirname, 'dist')
+      directory: path.resolve(__dirname, 'dist'),
     },
     port: 3000,
     open: true,
@@ -25,15 +25,15 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack App",
-      template: "src/template.html",
+      title: 'Webpack App',
+      template: 'src/template.html',
     }),
-  ]
-}
+  ],
+};
