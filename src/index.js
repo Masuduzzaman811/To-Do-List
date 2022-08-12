@@ -1,45 +1,19 @@
 import '../styles/style.css';
+import Task from './task.js';
 
-const todos = [
-  {
-    description: 'task1',
-    completed: true,
-    index: 0,
-  },
+const addTaskInput = document.querySelector('.add-task-input');
+const addBtn = document.querySelector('.add-task-btn');
+const mainTasksCont = document.querySelector('.main-tasks');
+const clearComplete = document.querySelector('.clear-btn');
 
-  {
-    description: 'task2',
-    completed: true,
-    index: 1,
-  },
-
-];
-
-const todoDisplay = document.querySelector('.todos-display');
-const showtodo = () => {
-  let li = '';
-
-  todos.forEach((todo, index) => {
-    li += `
-            <label for="checkbox">
-            <input type="checkbox" ${index}>
-            <p class="my-todo" contenteditable="true">${todo.description}</p>
-            <div class="show-options">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-              <div class='show'>
-                <i class="fa-solid fa-trash-can"" ></i>
-              </div>
-            </div>
-        </label>
-            `;
-  });
-  todoDisplay.innerHTML = li;
-};
-
-showtodo();
-
-todos.sort((a, b) => {
-  if (a.index < b.index) return -1;
-  if (a.index > b.index) return 1;
-  return 0;
+addBtn.addEventListener('click', Task.addTask);
+addTaskInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    Task.addTask(e);
+  }
 });
+
+mainTasksCont.addEventListener('click', Task.deleteTask);
+clearComplete.addEventListener('click', Task.clearComplete);
+document.addEventListener('DOMContentLoaded', Task.showTasks);
+document.addEventListener('DOMContentLoaded', Task.actions);

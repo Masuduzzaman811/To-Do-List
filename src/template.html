@@ -1,39 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/b331332bf9.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Lato:wght@300;900&family=Poppins&family=Roboto&display=swap"
-     rel="stylesheet">
-    <title>Todo-list App</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-
 <body>
-  <section class="wrapper">
-    <div class="heading-section">
-      <h1 class="todayTodo">Today's To Do</h1>
-      <i class="fa-solid fa-rotate"></i>
+  <div class="todo-container">
+    <div class="todo-header">
+      <h2 class="title">To-Do</h2>
+      <span class="refresh material-icons">refresh</span>
     </div>
-    <div class="input-todo-field">
-      <input class="todo-input" type="text" placeholder="Add to your list..">
-      <span class="material-symbols-outlined arrowz">
-        subdirectory_arrow_left
-      </span>
+    <hr>
+    <form action="#" method="post" name="taskForm" class="add-task-container">
+      <input class="add-task-input" type="text" name="description" id="addTask" placeholder="Add to your list..." required>
+      <span class="add-task-btn material-icons">keyboard_return</span>
+    </form>
+    <hr>
+    <div class="main-tasks"></div>
+    <div class="clear">
+      <button type="button" class="clear-btn">Clear all completed</button>
     </div>
-
-    <div class="todos-display">
-    </div>
-    
-    <div class="clear-todos">
-      <button class="clearAll">Clear all completed</button>
-    </div>
-  </section>
+  </div>
 </body>
-
 </html>
