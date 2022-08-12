@@ -1,7 +1,152 @@
-html {
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: tomato;
+  width: 100%;
+  background: #eee;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 10%;
+  box-shadow: 5px 5px 9px 1px grey;
+  border-radius: 3px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heading-section {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.todayTodo {
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+}
+
+.fa-rotate {
+  color: gray;
+  font-size: 12px;
+  align-self: center;
+}
+
+.input-todo-field {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.todo-input {
+  border: none;
+  width: 90%;
+  font-size: 15px;
+  outline: none;
+}
+
+::placeholder {
+  color: lightgray;
+  font-style: italic;
+}
+
+.arrowz {
+  font-size: 28px;
+  position: absolute;
+  right: 9px;
+}
+
+.todos-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+label {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  width: inherit;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid lightgray;
+  gap: 10px;
+}
+
+input#check {
+  width: 16px;
+  height: 26px;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.fa-ellipsis-vertical {
+  align-self: center;
+  position: absolute;
+  right: 9px;
+  color: lightgray;
+}
+
+.fa-trash-can {
+  display: none;
+}
+
+.fa-trash-can.active {
+  display: flex;
+  align-self: center;
+  position: absolute;
+  right: 15px;
+  background: #eee;
+  width: 50px;
+  height: 28px;
+  text-align: center;
+  padding-top: 6px;
+  padding-left: 17px;
+}
+
+.my-todo {
+  font-size: 15px;
+  color: gray;
+  width: inherit;
+}
+
+.show-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clear-todos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #eee;
+  border: 1px solid lightgrey;
+  border: 0;
+}
+
+.clearAll {
+  border: none;
+  background: #eee;
+  color: grey;
+  font-size: 15px;
+}
+
+[contenteditable]:focus {
+  background: antiquewhite;
+  outline: none;
 }
