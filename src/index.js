@@ -2,13 +2,13 @@ import '../styles/style.css';
 
 const todos = [
   {
-    description: 'Wash the dishes',
+    description: 'task1',
     completed: true,
     index: 0,
   },
 
   {
-    description: 'Complete To Do list project',
+    description: 'task2',
     completed: true,
     index: 1,
   },
