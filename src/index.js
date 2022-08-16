@@ -7,6 +7,7 @@ const mainTasksCont = document.querySelector('.main-tasks');
 const clearComplete = document.querySelector('.clear-btn');
 
 addBtn.addEventListener('click', Task.addTask);
+
 addTaskInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     Task.addTask(e);
