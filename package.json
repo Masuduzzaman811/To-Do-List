@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "homepage": "https://masuduzzaman811.github.io/To-Do-List/",
+  "homepage": "https://masuduzzaman811.github.io/To-Do-List/dist",
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
